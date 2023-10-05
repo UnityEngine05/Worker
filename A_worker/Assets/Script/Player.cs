@@ -3,10 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-//sprite layer
-//0~10 Background
-//10~20 Item
-
 
 public class Player : MonoBehaviour
 {
