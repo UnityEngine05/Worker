@@ -321,6 +321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 247674142}
   - component: {fileID: 247674141}
+  - component: {fileID: 247674143}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Hole
@@ -395,6 +396,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &247674143
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247674140}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &327697145
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +800,7 @@ MonoBehaviour:
   tool: {fileID: 1776420637}
   animator: {fileID: 599075695}
   inventoryGUI: {fileID: 608039997}
-  rigidbody2D: {fileID: 599075694}
+  spriteRenderer: {fileID: 599075696}
   speed: 3
   toolUseCoolMaxTime: 1
   toolUseCoolTime: 0
@@ -892,7 +928,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 100
   m_Sprite: {fileID: 123310506, guid: 0dfa1462b4dbd114cb66e1a796b064f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

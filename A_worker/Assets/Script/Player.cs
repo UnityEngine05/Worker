@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+//sprite layer
+//0~10 Background
+//10~20 Item
+
+
 public class Player : MonoBehaviour
 {
     public Tool tool;
     public Animator animator;
     public GameObject inventoryGUI;
-    public Rigidbody2D rigidbody2D;
+    public SpriteRenderer spriteRenderer;
 
     public float speed, toolUseCoolMaxTime, toolUseCoolTime;
     public bool moveStopPlayer;
@@ -28,7 +33,7 @@ public class Player : MonoBehaviour
         InventoryGUI();
     }
 
-    public void PlayerAction(bool playerAction)
+    public void PlayerActionStop(bool playerAction)
     {
         animator.SetBool("Walk", false);
         moveStopPlayer = playerAction;
@@ -79,7 +84,7 @@ public class Player : MonoBehaviour
             if (!inventoryGUI.active && !moveStopPlayer)
             {
                 inventoryGUI.SetActive(true);
-                PlayerAction(true);
+                PlayerActionStop(true);
             }
             else
             {
@@ -91,7 +96,7 @@ public class Player : MonoBehaviour
 
     IEnumerator MoveStopPlayerCoroutine()
     {
-        PlayerAction(true);
+        PlayerActionStop(true);
         yield return new WaitForSeconds(0.5f);
         tool.ToolUse();
         yield return new WaitForSeconds(0.25f);
@@ -100,11 +105,41 @@ public class Player : MonoBehaviour
             moveStopPlayer = false;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Hole"))
         {
-
+            StartCoroutine(EnterHole());
         }
+    }
+
+    IEnumerator EnterHole()
+    {
+        if (moveStopPlayer)
+            yield break;
+
+        animator.SetTrigger("EnterHole");
+        PlayerActionStop(true);
+        float times = 0;
+        float OnTime = 0.5f;
+        Vector3 OrgPos = transform.position;
+        while (times < OnTime)
+        {
+            times += Time.deltaTime;
+            
+            transform.position = Vector3.Lerp(OrgPos, OrgPos + new Vector3(0, 0.75f, 0), times/OnTime);
+            yield return new WaitForEndOfFrame();
+        }
+        times = 0;
+        while (times < OnTime)
+        {
+            times += Time.deltaTime;
+
+            transform.position = Vector3.Lerp(transform.position, OrgPos - new Vector3(0, 0.5f, 0), times / OnTime);
+            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.zero, times / OnTime);
+            yield return new WaitForEndOfFrame();
+        }
+
+        yield return new WaitForSeconds(0.6f);
     }
 }

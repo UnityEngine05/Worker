@@ -61,12 +61,12 @@ public class GameManager : MonoBehaviour
     {
         if(!storeUI)
         {
-            player.PlayerAction(true);
+            player.PlayerActionStop(true);
             storeUI = true;
         }
         else
         {
-            player.PlayerAction(false);
+            player.PlayerActionStop(false);
             storeUI = false;
         }
     }
