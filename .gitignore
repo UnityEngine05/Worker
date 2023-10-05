@@ -72,3 +72,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 A_worker/Library
 A_worker/obj/Debug
+A_worker/Temp
+A_worker/Logs
