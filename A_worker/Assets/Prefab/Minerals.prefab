@@ -103,6 +103,9 @@ MonoBehaviour:
   stoneSprite:
   - {fileID: 21300000, guid: cb974d756a63991489180be47e5a3efa, type: 3}
   - {fileID: 21300000, guid: de1f906108dcaa741928d45507f2924b, type: 3}
+  ironSprite:
+  - {fileID: -417983747, guid: 4bf35bb2b158f704e906e9077f087c54, type: 3}
+  - {fileID: 1600564061, guid: 4bf35bb2b158f704e906e9077f087c54, type: 3}
   hp: 10
 --- !u!61 &3488349830178876113
 BoxCollider2D:

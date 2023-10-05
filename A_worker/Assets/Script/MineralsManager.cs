@@ -38,6 +38,7 @@ public class MineralsManager : MonoBehaviour
         int[] randomInt = { 65, 16, 11, 6, 2 };
         int makeMineralNum = randomValue.RandomIntValue(randomInt);
 
+
         switch (makeMineralNum)
         {
             case 0:
