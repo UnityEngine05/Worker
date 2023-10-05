@@ -74,9 +74,9 @@ public class Player : MonoBehaviour
 
     void InventoryGUI()
     {
-        if (Input.GetButtonDown("Fire2") && !moveStopPlayer)
+        if (Input.GetButtonDown("Fire2"))
         {
-            if (!inventoryGUI.active)
+            if (!inventoryGUI.active && !moveStopPlayer)
             {
                 inventoryGUI.SetActive(true);
                 PlayerAction(true);
