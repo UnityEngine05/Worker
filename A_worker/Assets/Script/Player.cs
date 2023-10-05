@@ -109,11 +109,12 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Hole"))
         {
-            StartCoroutine(EnterHole());
+            Vector3 holePos = collision.transform.position;
+            StartCoroutine(EnterHole(holePos));
         }
     }
 
-    IEnumerator EnterHole()
+    IEnumerator EnterHole(Vector3 holePos)
     {
         if (moveStopPlayer)
             yield break;
@@ -135,7 +136,7 @@ public class Player : MonoBehaviour
         {
             times += Time.deltaTime;
 
-            transform.position = Vector3.Lerp(transform.position, OrgPos - new Vector3(0, 0.5f, 0), times / OnTime);
+            transform.position = Vector3.Lerp(transform.position, holePos, times / OnTime);
             transform.localScale = Vector3.Lerp(transform.localScale, Vector3.zero, times / OnTime);
             yield return new WaitForEndOfFrame();
         }
