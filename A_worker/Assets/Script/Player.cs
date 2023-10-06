@@ -8,11 +8,12 @@ public class Player : MonoBehaviour
 {
     public Tool tool;
     public Animator animator;
-    public GameObject inventoryGUI;
+    public GameObject inventoryGUI, fireObject;
     public SpriteRenderer spriteRenderer;
 
     public float speed, toolUseCoolMaxTime, toolUseCoolTime;
-    public bool moveStopPlayer;
+    public bool moveStopPlayer, fireObjectBool;
+    public int fireNum;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
         Move();
         Digging();
         InventoryGUI();
+        FireObject();
     }
 
     public void PlayerActionStop(bool playerAction)
@@ -66,11 +68,6 @@ public class Player : MonoBehaviour
                 toolUseCoolTime = toolUseCoolMaxTime;
             }
         }
-
-        if (Input.GetButton("Fire3"))
-        {
-
-        }
     }
 
     void InventoryGUI()
@@ -87,6 +84,18 @@ public class Player : MonoBehaviour
                 inventoryGUI.SetActive(false);
                 moveStopPlayer = false;
             }
+        }
+    }
+
+    void FireObject()
+    {
+        if (moveStopPlayer) return;
+
+        if (Input.GetButtonDown("Fire3") && fireNum > 0 && !fireObjectBool)
+        {
+            fireNum--;
+            GameObject fireObj = Instantiate(fireObject);
+            fireObj.transform.position = transform.position;
         }
     }
 
@@ -107,6 +116,19 @@ public class Player : MonoBehaviour
         {
             Vector3 holePos = collision.transform.position;
             StartCoroutine(EnterHole(holePos));
+        }
+
+        if (collision.gameObject.CompareTag("Fire"))
+        {
+            fireObjectBool = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Fire"))
+        {
+            fireObjectBool = false;
         }
     }
 

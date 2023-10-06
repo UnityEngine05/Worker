@@ -157,6 +157,79 @@ Transform:
   - {fileID: 534947987}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &67378811
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 258928111690309747, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalBounds.m_Center.x
+      value: 0.0060499907
+      objectReference: {fileID: 0}
+    - target: {fileID: 258928111690309747, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalBounds.m_Center.y
+      value: 0.005749941
+      objectReference: {fileID: 0}
+    - target: {fileID: 258928111690309747, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.x
+      value: 2.50005
+      objectReference: {fileID: 0}
+    - target: {fileID: 258928111690309747, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.y
+      value: 2.50225
+      objectReference: {fileID: 0}
+    - target: {fileID: 3786860970295750454, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_Name
+      value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686953387023356652, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.9549139
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686953387023356652, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.1996291
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686953387023356652, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686953387023356652, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686953387023356652, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686953387023356652, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686953387023356652, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686953387023356652, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686953387023356652, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8686953387023356652, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
 --- !u!1 &138992403
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,11 +736,11 @@ MonoBehaviour:
   m_ComponentVersion: 1
   m_LightType: 1
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
+  m_FalloffIntensity: 0.4
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.75
-  m_LightVolumeIntensity: 1
-  m_LightVolumeIntensityEnabled: 0
+  m_LightVolumeIntensity: 0.05
+  m_LightVolumeIntensityEnabled: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
@@ -682,8 +755,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0055000186, y: 0.00069999695, z: 0}
-    m_Extent: {x: 1.5009, y: 1.4995, z: 0}
+    m_Center: {x: 0.003000021, y: -0.001150012, z: 0}
+    m_Extent: {x: 1.4995, y: 1.50035, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -806,11 +879,14 @@ MonoBehaviour:
   tool: {fileID: 1776420637}
   animator: {fileID: 599075695}
   inventoryGUI: {fileID: 608039997}
+  fireObject: {fileID: 3786860970295750454, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
   spriteRenderer: {fileID: 599075696}
   speed: 3
   toolUseCoolMaxTime: 1
   toolUseCoolTime: 0
   moveStopPlayer: 0
+  fireObjectBool: 0
+  fireNum: 0
 --- !u!70 &599075693
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2587,3 +2663,4 @@ SceneRoots:
   - {fileID: 519539751}
   - {fileID: 1602816045}
   - {fileID: 1772828983}
+  - {fileID: 67378811}
