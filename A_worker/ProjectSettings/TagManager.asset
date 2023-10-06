@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Minerals
   - Hole
+  - Fire
   layers:
   - Default
   - TransparentFX
