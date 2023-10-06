@@ -32,6 +32,7 @@ public class Store : MonoBehaviour
     public void StoreExitButton()
     {
         act_StoreOpen.Invoke();
+        print("test");
         storeUI.SetActive(false);
     }
 }
