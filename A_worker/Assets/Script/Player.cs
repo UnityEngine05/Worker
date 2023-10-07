@@ -96,6 +96,7 @@ public class Player : MonoBehaviour
             fireNum--;
             GameObject fireObj = Instantiate(fireObject);
             fireObj.transform.position = transform.position;
+            Destroy(fireObj, 120);
         }
     }
 

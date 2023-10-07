@@ -166,20 +166,40 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 258928111690309747, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LightVolumeIntensity
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: 258928111690309747, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_ShadowVolumeIntensity
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 258928111690309747, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
       propertyPath: m_LocalBounds.m_Center.x
-      value: 0.0060499907
+      value: 0.0036000013
       objectReference: {fileID: 0}
     - target: {fileID: 258928111690309747, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
-      value: 0.005749941
+      value: -0.0019000769
       objectReference: {fileID: 0}
     - target: {fileID: 258928111690309747, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
       propertyPath: m_LocalBounds.m_Extent.x
-      value: 2.50005
+      value: 2.4966002
       objectReference: {fileID: 0}
     - target: {fileID: 258928111690309747, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
       propertyPath: m_LocalBounds.m_Extent.y
-      value: 2.50225
+      value: 2.4936
+      objectReference: {fileID: 0}
+    - target: {fileID: 258928111690309747, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_ShadowIntensityEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 258928111690309747, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_LightVolumeIntensityEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 258928111690309747, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: m_ShadowVolumeIntensityEnabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3786860970295750454, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
       propertyPath: m_Name
@@ -224,6 +244,10 @@ PrefabInstance:
     - target: {fileID: 8686953387023356652, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037208943654358738, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
+      propertyPath: light2D
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -755,8 +779,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.003000021, y: -0.001150012, z: 0}
-    m_Extent: {x: 1.4995, y: 1.50035, z: 0}
+    m_Center: {x: 0.0031499863, y: -0.0013999939, z: 0}
+    m_Extent: {x: 1.50605, y: 1.5048, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
