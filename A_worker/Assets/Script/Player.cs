@@ -103,8 +103,8 @@ public class Player : MonoBehaviour
     IEnumerator MoveStopPlayerCoroutine()
     {
         PlayerActionStop(true);
-        tool.ToolUse();
         yield return new WaitForSeconds(0.5f);
+        tool.ToolUse();
         yield return new WaitForSeconds(0.25f);
 
         if(!inventoryGUI.active)
