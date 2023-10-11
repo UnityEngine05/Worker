@@ -13,7 +13,7 @@ public class Minerals : MonoBehaviour
     public UnityAction<Minerals> act_Minerals;
 
     public SpriteRenderer mineralSprite;
-    public Sprite[] stoneSprite;
+    public Sprite[] stoneSprite, ironSprite;
 
     public float hp;
     // Start is called before the first frame update
@@ -62,6 +62,10 @@ public class Minerals : MonoBehaviour
                     mineralSprite.sprite = stoneSprite[1];
                 break;
             case MineralsType.iron:
+                if (hp < 10 && hp > 5)
+                    mineralSprite.sprite = ironSprite[0];
+                else if (hp < 6)
+                    mineralSprite.sprite = ironSprite[1];
                 break;
             case MineralsType.gold:
                 break;
