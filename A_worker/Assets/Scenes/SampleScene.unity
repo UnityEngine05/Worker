@@ -812,8 +812,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0049500465, y: 0.0080500245, z: 0}
-    m_Extent: {x: 1.49885, y: 1.49845, z: 0}
+    m_Center: {x: -0.0036999583, y: 0.0036999583, z: 0}
+    m_Extent: {x: 1.4995999, y: 1.494, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1434,7 +1434,7 @@ MonoBehaviour:
   mineralSprites:
   - {fileID: 21300000, guid: b200efb2f8af094438344b216f102256, type: 3}
   - {fileID: 1268303166, guid: 4bf35bb2b158f704e906e9077f087c54, type: 3}
-  - {fileID: 21300000, guid: 92b944f4c0a15aa47a797b554bbd6677, type: 3}
+  - {fileID: -1740018519, guid: 1f6f990d4d13fd44dbf1fdcfaecb0f1b, type: 3}
   - {fileID: 21300000, guid: 92b944f4c0a15aa47a797b554bbd6677, type: 3}
   - {fileID: 21300000, guid: 92b944f4c0a15aa47a797b554bbd6677, type: 3}
   randomValue: {fileID: 534947988}
@@ -2798,7 +2798,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5d280bb0b02ea0a4ea171511f9825cfc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 951767f6081fc9840bcf363a13c034ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
