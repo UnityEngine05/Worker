@@ -106,6 +106,9 @@ MonoBehaviour:
   ironSprite:
   - {fileID: -417983747, guid: 4bf35bb2b158f704e906e9077f087c54, type: 3}
   - {fileID: 1600564061, guid: 4bf35bb2b158f704e906e9077f087c54, type: 3}
+  goldSprite:
+  - {fileID: -800850917, guid: 1f6f990d4d13fd44dbf1fdcfaecb0f1b, type: 3}
+  - {fileID: 1427612446, guid: 1f6f990d4d13fd44dbf1fdcfaecb0f1b, type: 3}
   hp: 10
 --- !u!61 &3488349830178876113
 BoxCollider2D:
