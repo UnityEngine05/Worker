@@ -33,65 +33,60 @@ public class MineralsManager : MonoBehaviour
 
     void MakeMineral(int mineralBlockPos)
     {
-        for(int h = 0; h > -20; h--)
+        GameObject mineralBlock = Instantiate(mineralsBlocks);
+        Minerals minerals = mineralBlock.GetComponent<Minerals>();
+        int[] randomInt = { 65, 16, 11, 6, 2 };
+        int makeMineralNum = randomValue.RandomIntValue(randomInt);
+
+
+        switch (makeMineralNum)
         {
-            for (int i = 0; i < 22; i++)
-            {
-                GameObject mineralBlock = Instantiate(mineralsBlocks);
-                Minerals minerals = mineralBlock.GetComponent<Minerals>();
-                int[] randomInt = { 65, 16, 11, 6, 2 };
-                int makeMineralNum = randomValue.RandomIntValue(randomInt);
-
-                switch (makeMineralNum)
-                {
-                    case 0:
-                        minerals.mineralsType = MineralsType.stone;
-                        break;
-                    case 1:
-                        minerals.mineralsType = MineralsType.iron;
-                        break;
-                    case 2:
-                        minerals.mineralsType = MineralsType.gold;
-                        break;
-                    case 3:
-                        minerals.mineralsType = MineralsType.diamond;
-                        break;
-                    case 4:
-                        minerals.mineralsType = MineralsType.emerald;
-                        break;
-                    default:
-                        break;
-                }
-
-                switch (minerals.mineralsType)
-                {
-                    case MineralsType.stone:
-                        minerals.mineralSprite.sprite = mineralSprites[0];
-                        minerals.hp = 8;
-                        break;
-                    case MineralsType.iron:
-                        minerals.mineralSprite.sprite = mineralSprites[1];
-                        minerals.hp = 16;
-                        break;
-                    case MineralsType.gold:
-                        minerals.mineralSprite.sprite = mineralSprites[2];
-                        minerals.hp = 32;
-                        break;
-                    case MineralsType.diamond:
-                        minerals.mineralSprite.sprite = mineralSprites[3];
-                        minerals.hp = 64;
-                        break;
-                    case MineralsType.emerald:
-                        minerals.mineralSprite.sprite = mineralSprites[4];
-                        minerals.hp = 128;
-                        break;
-                    default:
-                        break;
-                }
-                mineralBlock.transform.position = mineralPos[mineralBlockPos].transform.position + new Vector3(i, h, 0);
-                minerals.act_Minerals = MineralSendGameManager;
-            }
+            case 0:
+                minerals.mineralsType = MineralsType.stone;
+                break;
+            case 1:
+                minerals.mineralsType = MineralsType.iron;
+                break;
+            case 2:
+                minerals.mineralsType = MineralsType.gold;
+                break;
+            case 3:
+                minerals.mineralsType = MineralsType.diamond;
+                break;
+            case 4:
+                minerals.mineralsType = MineralsType.emerald;
+                break;
+            default:
+                break;
         }
+
+        switch (minerals.mineralsType)
+        {
+            case MineralsType.stone:
+                minerals.mineralSprite.sprite = mineralSprites[0];
+                minerals.hp = 8;
+                break;
+            case MineralsType.iron:
+                minerals.mineralSprite.sprite = mineralSprites[1];
+                minerals.hp = 32;
+                break;
+            case MineralsType.gold:
+                minerals.mineralSprite.sprite = mineralSprites[2];
+                minerals.hp = 128;
+                break;
+            case MineralsType.diamond:
+                minerals.mineralSprite.sprite = mineralSprites[3];
+                minerals.hp = 512;
+                break;
+            case MineralsType.emerald:
+                minerals.mineralSprite.sprite = mineralSprites[4];
+                minerals.hp = 2048;
+                break;
+            default:
+                break;
+        }
+        mineralBlock.transform.position = mineralPos[mineralBlockPos].transform.position;
+        minerals.act_Minerals = MineralSendGameManager;
     }
 
     void MineralSendGameManager(Minerals _mineral)

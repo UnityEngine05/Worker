@@ -5,8 +5,11 @@ using UnityEngine;
 public class Tool : MonoBehaviour
 {
     public CircleCollider2D circleCollider2D;
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] toolSprite;
 
-    public float toolDamage;
+    public float[] toolDamage;
+    public int toolLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +41,22 @@ public class Tool : MonoBehaviour
         {
             Minerals minerals = collision.gameObject.GetComponent<Minerals>();
 
-            minerals.MineralsAttack(toolDamage);
+            minerals.MineralsAttack(GetDamage());
         }
+    }
+
+    float GetDamage()
+    {
+        if (toolLevel < 0)
+        {
+            Debug.Log("Tool level min error");
+            return toolDamage[0];
+        }
+        if (toolLevel >= toolDamage.Length)
+        {
+            Debug.Log("Tool level max error");
+            return toolDamage[toolDamage.Length - 1];
+        }
+        return toolDamage[toolLevel];
     }
 }

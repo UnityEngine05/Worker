@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ - sprite layer
+    0 ~ 10 Background
+    11 ~ 20 Item
+    21 ~ 30 Person
+    31 ~ 40 More
+    41 ~ 50 GUI
+*/
+
 public class GameManager : MonoBehaviour
 {
     public Player player;
@@ -61,12 +70,12 @@ public class GameManager : MonoBehaviour
     {
         if(!storeUI)
         {
-            player.PlayerAction(true);
+            player.PlayerActionStop(true);
             storeUI = true;
         }
         else
         {
-            player.PlayerAction(false);
+            player.PlayerActionStop(false);
             storeUI = false;
         }
     }
