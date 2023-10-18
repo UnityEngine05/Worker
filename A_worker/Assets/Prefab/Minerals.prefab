@@ -109,6 +109,12 @@ MonoBehaviour:
   goldSprite:
   - {fileID: -800850917, guid: 1f6f990d4d13fd44dbf1fdcfaecb0f1b, type: 3}
   - {fileID: 1427612446, guid: 1f6f990d4d13fd44dbf1fdcfaecb0f1b, type: 3}
+  diamondSprite:
+  - {fileID: -1473981173, guid: 21800b33a57b00c41a476ffed547cde2, type: 3}
+  - {fileID: -977224652, guid: 21800b33a57b00c41a476ffed547cde2, type: 3}
+  emeraldSprite:
+  - {fileID: -50852345, guid: 78b53a681e724cc429c67c18a9607c8e, type: 3}
+  - {fileID: 1930831101, guid: 78b53a681e724cc429c67c18a9607c8e, type: 3}
   hp: 10
 --- !u!61 &3488349830178876113
 BoxCollider2D:

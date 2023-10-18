@@ -68,19 +68,19 @@ public class MineralsManager : MonoBehaviour
                 break;
             case MineralsType.iron:
                 minerals.mineralSprite.sprite = mineralSprites[1];
-                minerals.hp = 16;
+                minerals.hp = 32;
                 break;
             case MineralsType.gold:
                 minerals.mineralSprite.sprite = mineralSprites[2];
-                minerals.hp = 32;
+                minerals.hp = 128;
                 break;
             case MineralsType.diamond:
                 minerals.mineralSprite.sprite = mineralSprites[3];
-                minerals.hp = 64;
+                minerals.hp = 512;
                 break;
             case MineralsType.emerald:
                 minerals.mineralSprite.sprite = mineralSprites[4];
-                minerals.hp = 128;
+                minerals.hp = 2048;
                 break;
             default:
                 break;

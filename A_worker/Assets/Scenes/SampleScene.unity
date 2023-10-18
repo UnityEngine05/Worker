@@ -812,8 +812,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0036999583, y: 0.0036999583, z: 0}
-    m_Extent: {x: 1.4995999, y: 1.494, z: 0}
+    m_Center: {x: -0.0017499924, y: -0.0015499592, z: 0}
+    m_Extent: {x: 1.49825, y: 1.50325, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1208,6 +1208,68 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &646379895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 646379896}
+  m_Layer: 0
+  m_Name: MineralPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &646379896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646379895}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2, y: -2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1028417975}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &651241740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651241741}
+  m_Layer: 0
+  m_Name: MineralPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &651241741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651241740}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: -2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1028417975}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &772219848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8686953387023356652, guid: 063c3204101c0984aba70624c0d6fb2a, type: 3}
@@ -1414,6 +1476,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1032858289}
+  - {fileID: 651241741}
+  - {fileID: 646379896}
+  - {fileID: 1216628032}
   m_Father: {fileID: 3789413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1028417976
@@ -1431,12 +1496,15 @@ MonoBehaviour:
   mineralsBlocks: {fileID: 4897600907577887642, guid: 79266b8aad4ec5843a4fa3f53942d8a4, type: 3}
   mineralPos:
   - {fileID: 1032858289}
+  - {fileID: 651241741}
+  - {fileID: 646379896}
+  - {fileID: 1216628032}
   mineralSprites:
   - {fileID: 21300000, guid: b200efb2f8af094438344b216f102256, type: 3}
   - {fileID: 1268303166, guid: 4bf35bb2b158f704e906e9077f087c54, type: 3}
   - {fileID: -1740018519, guid: 1f6f990d4d13fd44dbf1fdcfaecb0f1b, type: 3}
-  - {fileID: 21300000, guid: 92b944f4c0a15aa47a797b554bbd6677, type: 3}
-  - {fileID: 21300000, guid: 92b944f4c0a15aa47a797b554bbd6677, type: 3}
+  - {fileID: 970974804, guid: 21800b33a57b00c41a476ffed547cde2, type: 3}
+  - {fileID: 87629523, guid: 78b53a681e724cc429c67c18a9607c8e, type: 3}
   randomValue: {fileID: 534947988}
 --- !u!1 &1032858288
 GameObject:
@@ -1696,6 +1764,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107659766}
   m_CullTransparentMesh: 1
+--- !u!1 &1216628031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1216628032}
+  m_Layer: 0
+  m_Name: MineralPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1216628032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216628031}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3, y: -2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1028417975}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1308951873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2705,7 +2804,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circleCollider2D: {fileID: 1776420638}
-  toolDamage: 1
+  spriteRenderer: {fileID: 1776420636}
+  toolSprite: []
+  toolDamage:
+  - 1
+  - 1.25
+  - 1.5
+  - 1.75
+  - 2
+  - 2.5
+  - 3
+  - 3.5
+  - 4
+  - 4.5
+  - 5
+  toolLevel: 0
 --- !u!58 &1776420638
 CircleCollider2D:
   m_ObjectHideFlags: 0
